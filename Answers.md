@@ -1,7 +1,7 @@
 1. What problem does the context API help solve?
-    - Context API prevents prop drilling, which can add unecessary compute cycles.
+    - Context API prevents prop drilling by setting up a exported provider which holds the state needed to be accessed by other components. This prevents unecessary compute cycles from prop drilling. It also solves the problem of not being able to pass component state up to their parent component. 
 1. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-    - actions: functions that usually performs some action before returning an an object with type, and sometimes a payload. 
+    - actions: functions that usually performs some action before returning an an object with type, and sometimes a payload. It returns the dispatch arguments, or calls dispatch function depending if you are using middleware.
     - reducers: returns a copy of the state after dispatch is called with the type included in the dispatch call.
     - store: This is the single global state and is immuatable, which is why it's called a single source of truth. 
 1. What is the difference between Application state and Component state? When would be a good time to use one over the other?
