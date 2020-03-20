@@ -5,7 +5,7 @@
     - reducers: returns a copy of the state after dispatch is called with the type included in the dispatch call.
     - store: This is the single global state and is immuatable, which is why it's called a single source of truth. 
 1. What is the difference between Application state and Component state? When would be a good time to use one over the other?
-    - application state is a global state accessible by any of the components in the application, and component state is only kept in a single component and can only be passed down to nested components.
+    - application state is a global state accessible by any of the components in the application, and component state is only kept in a single component and can only be passed down to nested components as a prop.
 1. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
     - redux-thunk is a redux middleware that gives us access to dispatch in the action creator function so we can dispatch with different types and data depending on the results. Can be written like the following
         const foo = () => dispatch => {
